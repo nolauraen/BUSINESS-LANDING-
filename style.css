@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #e6f7ff;
+  text-align: center;
+
+  background: radial-gradient(circle at top, #0a3d62, #020617 70%);
+  overflow-x: hidden;
+}
+
+/* ===== SOFT CYBER GRID ===== */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+  background-size: 45px 45px;
+  z-index: -1;
+  animation: gridMove 8s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(45px); }
+}
+
+/* HEADER */
+header {
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,255,0.15);
+}
+
+/* HERO */
+.hero {
+  padding: 90px 20px;
+}
+
+.hero h2 {
+  font-size: 34px;
+  text-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+/* CARD */
+.card {
+  width: 260px;
+  padding: 16px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 15px rgba(0,255,255,0.08);
+
+  transition: 0.35s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.3),
+    0 0 60px rgba(0,255,255,0.15);
+}
+
+.card:hover img {
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/* BUTTON */
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+
+  background: linear-gradient(90deg, #ff3c3c, #ff6b6b);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 0 12px rgba(255,60,60,0.3);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255,60,60,0.6);
+}
+
+/* TEXT */
+h1 {
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0,255,255,0.3);
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  margin-top: 60px;
+
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(0,255,255,0.15);
+}
